@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Interactive Resume</title>
+   <link rel="stylesheet" href="css/normalize.min.css">
+   <link rel="stylesheet" href="css/foundation.css">
+   <link rel="stylesheet" href="css/style.css" >
+   <script src="js/modernizr.js"></script>
+   <script src="js/jquery-1.11.1.min.js"></script>
+   <script src="js/foundation.min.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="main" class="small-12 columns">
+        <div id="header" class="center-content">
+        <ul id="topContacts" class='flex-box'></ul>
+      </div>
+      </div>
+    </div>
+
+      <div style="clear: both;"></div>
+
+    <div class="row">
+      <div id="workExperience" class="gray" class="small-12 columns">
+        <h2>Work Experience</h2>
+      </div>
+
+      <div id="projects" class="gray" class="small-12 columns">
+        <h2>Projects</h2>
+      </div>
+
+      <div id="education" class="gray" class="small-12 columns">
+         <h2>Education</h2>
+      </div>
+         
+      <div id="skillsChart">
+        <h2>Skills</h2>
+      </div>
+    </div>
+
+    <div id="mapDiv">
+      <h2>Where I've Lived and Worked</h2>
+    </div>
+    <div class="row" id="footer" >
+      <div id="letsConnect" class="dark-gray" class="small-12 columns">
+        <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="center-content" class="flex-box"></ul>
+      </div>
+    </div>
+    <div class="row" id="modals">
+    </div>
+   
+  </div>
+
+ 
+  <script src="js/main.js"></script>
+  <script>
+
+   $(document).foundation();
+
+   if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("topContacts").style.backgroundColor = "#000000";
+   }
+   if(document.getElementsByTagName("h1").length === 0) {
+    document.getElementById("header").style.backgroundColor = "#000000";
+   }
+   if(document.getElementsByClassName("work-entry").length === 0) {
+    document.getElementById("workExperience").style.backgroundColor = "#000000";
+   }
+   if(document.getElementsByClassName("project-entry").length === 0) {
+    document.getElementById("projects").style.backgroundColor = "#000000";
+   }
+   if(document.getElementsByClassName("education-entry").length === 0) {
+    document.getElementById("education").style.backgroundColor = "#000000";
+   }
+   if(document.getElementsByClassName("skills-entry").length === 0) {
+    document.getElementById("skillsChart").style.display = "none";
+   }
+   if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("letsConnect").style.backgroundColor = "#000000";
+   }
+   if(document.getElementById("map") == undefined) {
+    document.getElementById("mapDiv").style.backgroundColor = "#000000";
+   }
+
+  </script>
+
+  </body>
+</html>
