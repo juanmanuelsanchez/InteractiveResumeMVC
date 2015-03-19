@@ -4,7 +4,7 @@
 (function () {
 	
 	var model= {
-		
+		//Data
 		bio: {
 			
 		  "name":"Juan Manuel Sánchez",
@@ -96,7 +96,7 @@
 		   }
 		   
 		],
-		
+		//Templates
 		templateBio: {
 		
 		      "HTMLheaderName":"<h1 id='name' class='small-12 columns'>%data%</h1>",
@@ -180,7 +180,7 @@
 
 	};
 	
-	
+	//Controller
 	var octopus= {
 		
 		init: function() {
@@ -268,7 +268,7 @@
 		
 	};
 	
-	
+	//Views
 	
 	var viewBio= {
 		
